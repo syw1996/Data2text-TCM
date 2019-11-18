@@ -175,6 +175,8 @@ def build_save_in_shards_using_shards_size(src_corpus, tgt_corpus, src_ref_corpu
         ret_list.append(pt_file)
         os.remove(src)
         os.remove(tgt_list[index])
+        os.remove(src_ref_list[index])
+        os.remove(tgt_ref_list[index])
         del dataset.examples
         gc.collect()
         del dataset

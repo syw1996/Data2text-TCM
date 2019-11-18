@@ -738,7 +738,7 @@ class Translator(object):
         self.out_file.seek(0)
         print()
 
-        res = subprocess.check_output("perl %s/tools/multi-bleu.perl %s"
+        res = subprocess.check_output("perl %s/multi-bleu.perl %s"
                                       % (base_dir, tgt_path),
                                       stdin=self.out_file,
                                       shell=True).decode("utf-8")
